@@ -1,55 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Configuración básica de la página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinépolis - Sencillo</title>
+
+    <!-- AQUÍ EMPIEZAN LOS ESTILOS (DISEÑO Y COLORES) -->
     <style>
-        /* Estilos usando solo nombres de colores en palabras */
+        /* Estilo general para toda la página */
         body {
             font-family: Arial, sans-serif;
-            background-color: navy;
-            color: white;
+            background-color: navy; /* Fondo azul marino */
+            color: white; /* Texto en blanco */
             margin: 0;
             padding: 0;
-            text-align: center;
+            text-align: center; /* Centra el texto */
         }
 
-        /* Encabezado y Menú de Navegación */
+        /* Encabezado superior */
         header {
             background-color: blue;
             padding: 20px;
-            border-bottom: 4px solid gold;
+            border-bottom: 4px solid gold; /* Línea dorada abajo del menú */
         }
 
+        /* Título principal "CINÉPOLIS" */
         h1 {
             color: gold;
             margin: 0 0 10px 0;
         }
 
+        /* Botones del menú de navegación */
         nav a {
             color: white;
-            text-decoration: none;
+            text-decoration: none; /* Le quita el subrayado a los enlaces */
             font-weight: bold;
             margin: 0 10px;
             padding: 8px 15px;
             background-color: navy;
-            border-radius: 5px;
+            border-radius: 5px; /* Redondea los bordes del botón */
             border: 1px solid gold;
             display: inline-block;
         }
 
+        /* Efecto al pasar el cursor sobre los botones del menú */
         nav a:hover {
             background-color: gold;
             color: black;
         }
 
-        /* Secciones principales */
+        /* Secciones principales de la página */
         section {
             padding: 30px 20px;
-            border-bottom: 2px solid white;
+            border-bottom: 2px solid white; /* Línea divisoria blanca */
         }
 
+        /* Títulos de cada sección */
         h2 {
             color: gold;
             border-bottom: 2px solid gold;
@@ -57,15 +64,16 @@
             padding-bottom: 5px;
         }
 
-        /* Galería de Tarjetas de Películas */
+        /* Contenedor que acomoda las tarjetas de películas una al lado de otra */
         .contenedor-peliculas {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
+            flex-wrap: wrap; /* Si no caben, pasa las tarjetas a la siguiente fila */
+            gap: 20px; /* Espacio entre cada tarjeta */
             margin-top: 20px;
         }
 
+        /* Caja de cada película (Tarjeta) */
         .tarjeta {
             background-color: blue;
             border: 2px solid gold;
@@ -75,14 +83,16 @@
             text-align: center;
         }
 
+        /* Ajuste de las imágenes dentro de las tarjetas */
         .tarjeta img {
             width: 100%;
             height: 300px;
-            object-fit: cover;
+            object-fit: cover; /* Recorta la imagen para que no se deforme */
             border-radius: 5px;
             background-color: lightgray;
         }
 
+        /* Botón de comprar boleto */
         .boton-comprar {
             background-color: gold;
             color: black;
@@ -95,6 +105,7 @@
             width: 100%;
         }
 
+        /* Botón de próximos estrenos */
         .boton-estreno {
             background-color: red;
             color: white;
@@ -106,7 +117,7 @@
             width: 100%;
         }
 
-        /* Formulario Club Cinépolis */
+        /* Caja del formulario Club Cinépolis */
         .formulario-club {
             background-color: blue;
             border: 2px solid gold;
@@ -121,6 +132,7 @@
             font-weight: bold;
         }
 
+        /* Campos de texto donde el usuario escribe */
         .formulario-club input {
             width: 90%;
             padding: 10px;
@@ -129,6 +141,7 @@
             border: 1px solid gold;
         }
 
+        /* Pie de página */
         footer {
             background-color: black;
             color: lightgray;
@@ -138,22 +151,23 @@
 </head>
 <body>
 
-    <!-- MENÚ DE NAVEGACIÓN -->
+    <!-- MENÚ DE NAVEGACIÓN PRINCIPAL -->
     <header>
         <h1>CINÉPOLIS</h1>
         <nav>
+            <!-- Enlaces que te llevan a cada sección de la página -->
             <a href="#cartelera">Cartelera</a>
             <a href="#estrenos">Próximos Estrenos</a>
             <a href="#club">Club Cinépolis</a>
         </nav>
     </header>
 
-    <!-- SECCIÓN 1: CARTELERA -->
+    <!-- SECCIÓN 1: PELÍCULAS EN CARTELERA -->
     <section id="cartelera">
         <h2>Películas en Cartelera</h2>
         <div class="contenedor-peliculas">
 
-            <!-- Película 1 -->
+            <!-- Película 1: Batman -->
             <div class="tarjeta">
                 <img src="imagenes/batman.jpg" alt="Póster de Batman">
                 <h3>Batman</h3>
@@ -162,7 +176,7 @@
                 <button class="boton-comprar">Comprar Boleto</button>
             </div>
 
-            <!-- Película 2 -->
+            <!-- Película 2: Avatar -->
             <div class="tarjeta">
                 <img src="imagenes/avatar.jpg" alt="Póster de Avatar">
                 <h3>Avatar</h3>
@@ -171,7 +185,7 @@
                 <button class="boton-comprar">Comprar Boleto</button>
             </div>
 
-            <!-- Película 3 -->
+            <!-- Película 3: Mario Bros -->
             <div class="tarjeta">
                 <img src="imagenes/mario.jpg" alt="Póster de Mario Bros">
                 <h3>Mario Bros</h3>
@@ -188,7 +202,7 @@
         <h2>Próximos Estrenos</h2>
         <div class="contenedor-peliculas">
 
-            <!-- Estreno 1 -->
+            <!-- Estreno 1: Spider-Man -->
             <div class="tarjeta">
                 <img src="imagenes/spiderman.jpg" alt="Póster de Spider-Man">
                 <h3>Spider-Man</h3>
@@ -196,7 +210,7 @@
                 <button class="boton-estreno">Próximamente</button>
             </div>
 
-            <!-- Estreno 2 -->
+            <!-- Estreno 2: Avengers -->
             <div class="tarjeta">
                 <img src="imagenes/avengers.jpg" alt="Póster de Avengers">
                 <h3>Avengers</h3>
@@ -207,15 +221,17 @@
         </div>
     </section>
 
-    <!-- SECCIÓN 3: CLUB CINÉPOLIS -->
+    <!-- SECCIÓN 3: FORMULARIO CLUB CINÉPOLIS -->
     <section id="club">
         <h2>Club Cinépolis</h2>
         <p>Ingresa los datos de tu tarjeta de socio:</p>
         
         <form class="formulario-club">
+            <!-- Campo para el nombre -->
             <label for="nombre">Nombre del Titular:</label><br>
             <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required><br>
 
+            <!-- Campo para la tarjeta de 16 dígitos -->
             <label for="tarjeta">Número de Tarjeta (16 dígitos):</label><br>
             <input type="text" id="tarjeta" name="tarjeta" placeholder="1234567890123456" maxlength="16" pattern="[0-9]{16}" title="Ingresa 16 dígitos numéricos sin espacios" required><br>
 
@@ -223,7 +239,7 @@
         </form>
     </section>
 
-    <!-- PIE DE PÁGINA -->
+    <!-- PIE DE PÁGINA (DERECHOS DE AUTOR) -->
     <footer>
         <p>© Cinépolis - Sitio Web de Ejemplo Sencillo</p>
     </footer>
