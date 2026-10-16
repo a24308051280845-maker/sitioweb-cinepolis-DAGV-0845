@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinépolis - Sencillo</title>
+    <style>
+        /* Estilos usando solo nombres de colores en palabras */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: navy;
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Encabezado y Menú de Navegación */
+        header {
+            background-color: blue;
+            padding: 20px;
+            border-bottom: 4px solid gold;
+        }
+
+        h1 {
+            color: gold;
+            margin: 0 0 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+            padding: 8px 15px;
+            background-color: navy;
+            border-radius: 5px;
+            border: 1px solid gold;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: gold;
+            color: black;
+        }
+
+        /* Secciones principales */
+        section {
+            padding: 30px 20px;
+            border-bottom: 2px solid white;
+        }
+
+        h2 {
+            color: gold;
+            border-bottom: 2px solid gold;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Galería de Tarjetas de Películas */
+        .contenedor-peliculas {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .tarjeta {
+            background-color: blue;
+            border: 2px solid gold;
+            border-radius: 10px;
+            width: 220px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .tarjeta img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            background-color: lightgray;
+        }
+
+        .boton-comprar {
+            background-color: gold;
+            color: black;
+            border: none;
+            padding: 10px 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .boton-estreno {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        /* Formulario Club Cinépolis */
+        .formulario-club {
+            background-color: blue;
+            border: 2px solid gold;
+            max-width: 350px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .formulario-club label {
+            font-weight: bold;
+        }
+
+        .formulario-club input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid gold;
+        }
+
+        footer {
+            background-color: black;
+            color: lightgray;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <header>
+        <h1>CINÉPOLIS</h1>
+        <nav>
+            <a href="#cartelera">Cartelera</a>
+            <a href="#estrenos">Próximos Estrenos</a>
+            <a href="#club">Club Cinépolis</a>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN 1: CARTELERA -->
+    <section id="cartelera">
+        <h2>Películas en Cartelera</h2>
+        <div class="contenedor-peliculas">
+
+            <!-- Película 1 -->
+            <div class="tarjeta">
+                <img src="imagenes/batman.jpg" alt="Póster de Batman">
+                <h3>Batman</h3>
+                <p>Clasificación: B15</p>
+                <p>Duración: 120 min</p>
+                <button class="boton-comprar">Comprar Boleto</button>
+            </div>
+
+            <!-- Película 2 -->
+            <div class="tarjeta">
+                <img src="imagenes/avatar.jpg" alt="Póster de Avatar">
+                <h3>Avatar</h3>
+                <p>Clasificación: B</p>
+                <p>Duración: 150 min</p>
+                <button class="boton-comprar">Comprar Boleto</button>
+            </div>
+
+            <!-- Película 3 -->
+            <div class="tarjeta">
+                <img src="imagenes/mario.jpg" alt="Póster de Mario Bros">
+                <h3>Mario Bros</h3>
+                <p>Clasificación: A</p>
+                <p>Duración: 90 min</p>
+                <button class="boton-comprar">Comprar Boleto</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN 2: PRÓXIMOS ESTRENOS -->
+    <section id="estrenos">
+        <h2>Próximos Estrenos</h2>
+        <div class="contenedor-peliculas">
+
+            <!-- Estreno 1 -->
+            <div class="tarjeta">
+                <img src="imagenes/spiderman.jpg" alt="Póster de Spider-Man">
+                <h3>Spider-Man</h3>
+                <p>Estreno: Próximo mes</p>
+                <button class="boton-estreno">Próximamente</button>
+            </div>
+
+            <!-- Estreno 2 -->
+            <div class="tarjeta">
+                <img src="imagenes/avengers.jpg" alt="Póster de Avengers">
+                <h3>Avengers</h3>
+                <p>Estreno: Próximo año</p>
+                <button class="boton-estreno">Próximamente</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: CLUB CINÉPOLIS -->
+    <section id="club">
+        <h2>Club Cinépolis</h2>
+        <p>Ingresa los datos de tu tarjeta de socio:</p>
+        
+        <form class="formulario-club">
+            <label for="nombre">Nombre del Titular:</label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required><br>
+
+            <label for="tarjeta">Número de Tarjeta (16 dígitos):</label><br>
+            <input type="text" id="tarjeta" name="tarjeta" placeholder="1234567890123456" maxlength="16" pattern="[0-9]{16}" title="Ingresa 16 dígitos numéricos sin espacios" required><br>
+
+            <button type="submit" class="boton-comprar">Ingresar a mi Club</button>
+        </form>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>© Cinépolis - Sitio Web de Ejemplo Sencillo</p>
+    </footer>
+
+</body>
+</html>
